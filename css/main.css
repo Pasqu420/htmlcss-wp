@@ -3,10 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container{
-  width: 70%;
+  width: 63%;
   margin: auto;
 }
 
@@ -17,7 +18,7 @@ header{
 }
 
 header img{
-width: 13%;
+width: 15%;
 height: auto;
 border-right: 0.1vw solid black;
 padding-right: 3%;
@@ -26,29 +27,69 @@ padding-right: 3%;
 nav a{
   display: inline-block;
   margin: 2% 2% 3% 0%;
-  font-size: calc(1vw + 2px);
+  font-size: calc(1vw + 3px);
   text-decoration: none;
+  color: rgba(128,128,128, 0.9);
+}
+
+.paragraph{
   color: rgba(128,128,128, 0.9);
 }
 /* regole main */
 
+/* regole jumbotron */
+
 .jumbotron{
-  height: 65vh;
-  /* debug */
-  background-color: yellow;
+  width: 100%;
+  height: 55vh;
+  background-image: url(../img/banner.jpg);
+  background-position: center;
+  border-radius: 3%;
+  position: relative;
 }
+
+.title{
+  width: 52%;
+  position: absolute;
+  bottom: 16%;
+  left: 5%;
+  z-index: 10;
+  color: rgba(255,250,240, 1);
+}
+
+.title h1{
+  font-size: calc(1vw + 15px);
+}
+
+.layover{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(128,128,128, 0.3);
+  border-radius: 3%;
+}
+
+/* regole leadership */
 
 .leadership{
   height: 10vh;
-  margin-top: 3vh;
-  /* debug */
-  background-color: lightblue;
+  margin: 3vh 0;
 }
+
+.leadership h1{
+  font-size: calc(2vw + 20px);
+}
+
+.leadership p{
+  font-size: calc(0.5vw + 10px);
+}
+
+/* regole container float */
 
 .container-float{
   width: 100%;
-  /* debug */
-  background-color: blue;
 }
 
 .container-float::after{
@@ -59,20 +100,43 @@ nav a{
 
 .box-lateral{
   width: 25%;
-  height: 55vh;
+  height: 56vh;
   float: left;
-  margin-top: 4vh;
-  /* debug */
-  background-color: lightblue;
+  position: relative;
+}
+
+.box-lateral img{
+  width: 100%;
+  height: 28vh;
+}
+
+.box-layover{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+  background-color: rgba(128,128,128, 0.3);
+  border-radius: 10%;
+}
+.box-layover.center{
+  bottom: 61.5%;
+}
+
+section h2{
+  margin: 2vh 0;
 }
 
 .box-center{
+  position: relative;
   width: 45%;
-  height: 60vh;
   float: left;
-  margin: 4vh 2.5%;
-  /* debug */
-  background-color: lightblue;
+  margin: 0vh 2.5%;
+}
+
+.box-center img{
+  width: 100%;
+  height: 28vh;
 }
 
 /* regole footer */
@@ -80,7 +144,20 @@ nav a{
 footer{
   width: 100%;
   height: 5vh;
-  margin-top: 3vh;
-  /* debug */
-  background-color: purple;
+  margin-top: 5vh;
+  font-size:calc(1vw + 10px);
+  position: relative;
+}
+
+footer span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer a{
+  text-decoration: none;
+  color: red;
+  font-size: 2vw;
 }
